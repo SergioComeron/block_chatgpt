@@ -18,7 +18,7 @@
  * Version details
  *
  * @package    block_course_summary
- * @copyright  2018 Sergio Comerón Sánchez-Paniagua 
+ * @copyright  2018 Sergio Comerón Sánchez-Paniagua
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -28,4 +28,4 @@ $plugin->version   = 2018101100;
 $plugin->requires  = 2017050500;
 $plugin->component = 'block_common_courses';
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.0'; 
+$plugin->release   = '1.0';
