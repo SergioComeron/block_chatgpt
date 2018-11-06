@@ -18,7 +18,7 @@
  * Course summary block
  *
  * @package    block_common_courses
- * @copyright  2018 Sergio Comerón (sergio.comeron@udima.es)
+ * @copyright  2018 Sergio Comerón Sánchez-Paniagua
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -29,19 +29,19 @@ class block_common_courses extends block_list {
      */
     private $headerhidden = true;
 
-    function init() {
+    public function init() {
         $this->title = get_string('pluginname', 'block_common_courses');
     }
 
-    function applicable_formats() {
+    public function applicable_formats() {
         // Only add at site home
         return array('site-index' => true);
     }
 
-    function get_content() {
+    public function get_content() {
         global $USER;
 
-        if ($this->content !== NULL){
+        if ($this->content !== null) {
             return $this->content;
         }
 
@@ -51,36 +51,31 @@ class block_common_courses extends block_list {
 
         $this->content = new stdClass();
         $this->content->items = array();
-        
-        $myuserid=$USER->id;
-        $hisuserid=optional_param('id', 0, PARAM_INT);
-        $courseid=optional_param('course', 0, PARAM_INT);
+        $myuserid = $USER->id;
+        $hisuserid = optional_param('id', 0, PARAM_INT);
+        $courseid = optional_param('course', 0, PARAM_INT);
 
-        if (((strpos($this->page->pagetype,'user-profile') === 0) || 
-             ((strpos($this->page->pagetype, 'course-view-topics') === 0) && ($courseid!=0)) || 
-             ((strpos($this->page->pagetype, 'course-view-weeks') === 0) && ($courseid!=0))) && $myuserid!=$hisuserid)  {
-            
+        if (((strpos($this->page->pagetype, 'user-profile') === 0) || ((strpos($this->page->pagetype, 'course-view-topics') === 0) && ($courseid != 0)) ||
+                ((strpos($this->page->pagetype, 'course-view-weeks') === 0) && ($courseid != 0))) && $myuserid != $hisuserid)  {
             $userid1courses = enrol_get_all_users_courses($myuserid, $onlyactive, $fields, $sort);
             $userid2courses = enrol_get_all_users_courses($hisuserid, $onlyactive, $fields, $sort);
             $commoncourses = array_intersect_key($userid1courses, $userid2courses);
-
-            foreach ($commoncourses as $common){
-                $coursevisibility=$common->visible;
-                if ($coursevisibility==1){
-                     $coursename=$common->fullname;
-                     $course=$common->id;
-                     if ($course!=$courseid){
-                          $url='./view.php?id='.$hisuserid.'&course='.$common->id;
-                          $this->content->items[] = '<a href="'.$url.'">'.$coursename.'</a>';
-                     }else{
-                          $this->content->items[] = $coursename;
-                     }
+            foreach ($commoncourses as $common) {
+                $coursevisibility = $common->visible;
+                if ($coursevisibility == 1){
+                    $coursename =$common->fullname;
+                    $course = $common->id;
+                    if ($course != $courseid){
+                        $url='./view.php?id='.$hisuserid.'&course='.$common->id;
+                        $this->content->items[] = '<a href="'.$url.'">'.$coursename.'</a>';
+                    }else{
+                        $this->content->items[] = $coursename;
+                    }
                 }
-            }             
+            }
         } else {
             $this->content = '';
         }
-
         return $this->content;
     }
 }
