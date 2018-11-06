@@ -17,7 +17,7 @@
 /**
  * Strings for component 'block_course_shortname', language 'en', branch 'MOODLE_20_STABLE'
  *
- * @package   block_course_shortname
+ * @package   block_common_courses
  * @copyright 2018 Sergio Comerón (sergio.comeron@udima.es)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

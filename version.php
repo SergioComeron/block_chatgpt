@@ -17,7 +17,7 @@
 /**
  * Version details
  *
- * @package    block_course_summary
+ * @package    block_common_courses
  * @copyright  2018 Sergio Comerón Sánchez-Paniagua
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

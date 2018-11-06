@@ -15,9 +15,15 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Course summary block
+ * Block Common Courses
+ * With this block installed, the courses that are enrolled and we are enrolled are shown in the profile of a user.
+ * This is very useful, for example, when a user with a teacher role receives a message from a user with a student role,
+ * if that teacher has many courses it is very difficult to know how to contextualize the user who sends a message,
+ * if you have this block installed you can limit the context a bit and it will be easier to know what course
+ * the student is writing to.
  *
  * @package    block_common_courses
+ * @category   blocks
  * @copyright  2018 Sergio Comerón Sánchez-Paniagua
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -28,15 +34,27 @@ class block_common_courses extends block_list {
      */
     private $headerhidden = true;
 
+    /**
+     * Init function
+     *
+     */
     public function init() {
         $this->title = get_string('pluginname', 'block_common_courses');
     }
 
+    /**
+     * applicable_formats function
+     *
+     */
     public function applicable_formats() {
         // Only add at site home
         return array('site-index' => true);
     }
 
+    /**
+     * get_content function
+     *
+     */
     public function get_content() {
         global $USER;
 
