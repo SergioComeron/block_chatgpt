@@ -41,8 +41,8 @@ class block_common_courses extends block_list {
      *
      */
     public function applicable_formats() {
-        // Only add at site home
-        return array('site-index' => true);
+        // Only add at user-profile and other course-profiles (weeks & topics)
+        return array('user-profile' => true, 'course-view-weeks' => true, 'course-view-topics' => true);
     }
 
     /**
@@ -69,9 +69,7 @@ class block_common_courses extends block_list {
         if (((strpos($this->page->pagetype, 'user-profile') === 0) ||
                 ((strpos($this->page->pagetype, 'course-view-topics') === 0) && ($courseid != 0)) ||
                 ((strpos($this->page->pagetype, 'course-view-weeks') === 0) && ($courseid != 0))) && $myuserid != $hisuserid) {
-            $userid1courses = enrol_get_all_users_courses($myuserid, $onlyactive, $fields, $sort);
-            $userid2courses = enrol_get_all_users_courses($hisuserid, $onlyactive, $fields, $sort);
-            $commoncourses = array_intersect_key($userid1courses, $userid2courses);
+            $commoncourses = enrol_get_shared_courses($myuserid, $hisuserid);
             foreach ($commoncourses as $common) {
                 $coursevisibility = $common->visible;
                 if ($coursevisibility == 1) {
