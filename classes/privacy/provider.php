@@ -15,14 +15,22 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_course_shortname', language 'en', branch 'MOODLE_20_STABLE'
+ * Privacy Subsystem implementation for block_common_courses.
  *
- * @package   block_common_courses
- * @copyright 2018 Sergio Comerón (sergio.comeron@udima.es)
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    block_common_courses
+ * @copyright  2018 Sergio Comerón <sergio.comeron@udima.es>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['commoncourses'] = 'Common Courses';
-$string['course_shortname:addinstance'] = 'Add a new Common Courses';
-$string['pluginname'] = 'Common Courses';
-$string['privacy:metadata'] = 'The Common Courses block only displays existing common courses with other user.';
+class provider implements \core_privacy\local\metadata\null_provider {
+
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return  string
+     */
+    public static function get_reason() : string {
+        return 'privacy:metadata';
+    }
+}
