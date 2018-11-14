@@ -42,7 +42,7 @@ class block_common_courses extends block_list {
      */
     public function applicable_formats() {
         // Only add at user-profile and other course-profiles (weeks & topics)
-        return array('user-profile' => true, 'course-view-weeks' => true, 'course-view-topics' => true);
+        return array('all' => true);
     }
 
     /**
