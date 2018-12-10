@@ -62,6 +62,7 @@ class block_common_courses extends block_list {
 
         $this->content = new stdClass();
         $this->content->items = array();
+        $this->content->icons = array();
         $myuserid = $USER->id;
         $hisuserid = optional_param('id', 0, PARAM_INT);
         $courseid = optional_param('course', 0, PARAM_INT);
@@ -78,8 +79,10 @@ class block_common_courses extends block_list {
                     if ($course != $courseid) {
                         $url = './view.php?id='.$hisuserid.'&course='.$common->id;
                         $this->content->items[] = '<a href="'.$url.'">'.$coursename.'</a>';
+                        $this->content->icons[] = '';
                     } else {
                         $this->content->items[] = $coursename;
+                        $this->content->items[] = '';
                     }
                 }
             }
