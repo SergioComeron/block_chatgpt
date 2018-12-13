@@ -71,7 +71,7 @@ class block_common_courses extends block_list {
                 ((strpos($this->page->pagetype, 'course-view-topics') === 0) && ($courseid != 0)) ||
                 ((strpos($this->page->pagetype, 'course-view-weeks') === 0) && ($courseid != 0))) && $myuserid != $hisuserid) {
             $commoncourses = enrol_get_shared_courses($myuserid, $hisuserid);
-            if ($commoncourses != null){
+            if ($commoncourses != null) {
                 foreach ($commoncourses as $common) {
                     $coursevisibility = $common->visible;
                     if ($coursevisibility == 1) {
