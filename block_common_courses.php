@@ -71,20 +71,22 @@ class block_common_courses extends block_list {
                 ((strpos($this->page->pagetype, 'course-view-topics') === 0) && ($courseid != 0)) ||
                 ((strpos($this->page->pagetype, 'course-view-weeks') === 0) && ($courseid != 0))) && $myuserid != $hisuserid) {
             $commoncourses = enrol_get_shared_courses($myuserid, $hisuserid);
-            foreach ($commoncourses as $common) {
-                $coursevisibility = $common->visible;
-                if ($coursevisibility == 1) {
-                    $coursename = format_string($common->fullname);
-                    $course = $common->id;
-                    if ($course != $courseid) {
-                        $url = './view.php?id='.$hisuserid.'&course='.$common->id;
-                        $this->content->items[] = '<a href="'.$url.'">'.$coursename.'</a>';
-                        $this->content->icons[] = '';
-                    } else {
-                        $this->content->items[] = $coursename;
-                        $this->content->items[] = '';
-                    }
-                }
+            if ($commoncourses!=null){
+              foreach ($commoncourses as $common) {
+                  $coursevisibility = $common->visible;
+                  if ($coursevisibility == 1) {
+                      $coursename = format_string($common->fullname);
+                      $course = $common->id;
+                      if ($course != $courseid) {
+                          $url = './view.php?id='.$hisuserid.'&course='.$common->id;
+                          $this->content->items[] = '<a href="'.$url.'">'.$coursename.'</a>';
+                          $this->content->icons[] = '';
+                      } else {
+                          $this->content->items[] = $coursename;
+                          $this->content->items[] = '';
+                      }
+                  }
+              }
             }
         } else {
             $this->content = '';
