@@ -74,7 +74,7 @@ class block_common_courses extends block_list {
             foreach ($commoncourses as $common) {
                 $coursevisibility = $common->visible;
                 if ($coursevisibility == 1) {
-                    $coursename = $common->fullname;
+                    $coursename = format_string($common->fullname);
                     $course = $common->id;
                     if ($course != $courseid) {
                         $url = './view.php?id='.$hisuserid.'&course='.$common->id;
