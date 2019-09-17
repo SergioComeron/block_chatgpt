@@ -23,6 +23,7 @@
  */
 
 $string['commoncourses'] = 'Common Courses';
-$string['course_shortname:addinstance'] = 'Add a new Common Courses';
+$string['common_courses:addinstance'] = 'Add a new Common Courses';
+$string['common_courses:myaddinstance'] = 'My add Common Courses';
 $string['pluginname'] = 'Common Courses';
 $string['privacy:metadata'] = 'The Common Courses block only displays existing common courses with other user.';
