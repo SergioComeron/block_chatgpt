@@ -22,6 +22,14 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+
+ /**
+  * Privacy class for requesting user data.
+  *
+  * @package    mod_assign
+  * @copyright  2018 Adrian Greeve <adrian@moodle.com>
+  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+  */
 class provider implements \core_privacy\local\metadata\null_provider {
 
     /**
