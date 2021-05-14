@@ -26,8 +26,8 @@
  /**
   * Privacy class for requesting user data.
   *
-  * @package    mod_assign
-  * @copyright  2018 Adrian Greeve <adrian@moodle.com>
+  * @package    block common_courses
+  * @copyright  2021 Sergio Comerón <sergiocomeron@icloud.com>
   * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
   */
 class provider implements \core_privacy\local\metadata\null_provider {
