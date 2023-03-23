@@ -33,7 +33,7 @@
  *
  * @since Moodle 2.0
  * @package block_chatgpt
- * @copyright 2018 Sergio Comerón <sergio.comeron@udima.es>
+ * @copyright  2023 Sergio Comerón Sánchez-Paniagua (sergiocomeron@icloud.com)
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
