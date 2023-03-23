@@ -17,7 +17,7 @@
 /**
  * Course summary block caps.
  *
- * @package    block_common_courses
+ * @package    block_chatgpt
  * @copyright  Sergio Comerón <sergio.comeron@udima.es>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
-    'block/common_courses:myaddinstance' => array(
+    'block/chatgpt:myaddinstance' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => array(
@@ -35,7 +35,7 @@ $capabilities = array(
         'clonepermissionsfrom' => 'moodle/my:manageblocks'
     ),
 
-    'block/common_courses:addinstance' => array(
+    'block/chatgpt:addinstance' => array(
         'riskbitmask' => RISK_SPAM | RISK_XSS,
 
         'captype' => 'write',

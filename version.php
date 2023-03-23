@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
+ * Version detailsf f
  *
- * @package    block_common_courses
+ * @package    block_chatgpt
  * @copyright  2018 Sergio Comerón Sánchez-Paniagua
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -26,6 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2021051401;
 $plugin->requires  = 2017050500;
-$plugin->component = 'block_common_courses';
+$plugin->component = 'block_chatgpt';
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->release   = '1.7';

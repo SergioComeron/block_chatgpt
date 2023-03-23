@@ -17,13 +17,13 @@
 /**
  * Strings for component 'block_course_shortname', language 'en', branch 'MOODLE_20_STABLE'
  *
- * @package   block_common_courses
+ * @package   block_chatgpt
  * @copyright 2018 Sergio Comerón (sergio.comeron@udima.es)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['commoncourses'] = 'Common Courses';
-$string['common_courses:addinstance'] = 'Add a new Common Courses';
-$string['common_courses:myaddinstance'] = 'My add Common Courses';
-$string['pluginname'] = 'Common Courses';
-$string['privacy:metadata'] = 'The Common Courses block only displays existing common courses with other user.';
+$string['chatgpt:addinstance'] = 'Add a new Chatgpt block';
+$string['chatgpt:myaddinstance'] = 'My add Chatgpt block';
+$string['pluginname'] = 'Chatgpt';
+$string['privacy:metadata'] = 'The Chatgpt block.';

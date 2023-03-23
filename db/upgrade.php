@@ -32,7 +32,7 @@
  * before any action that may take longer time to finish.
  *
  * @since Moodle 2.0
- * @package block_common_courses
+ * @package block_chatgpt
  * @copyright 2018 Sergio Comerón <sergio.comeron@udima.es>
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -45,7 +45,7 @@ defined('MOODLE_INTERNAL') || die();
  * @param int $oldversion
  * @param object $block
  */
-function xmldb_block_common_courses_upgrade($oldversion, $block) {
+function xmldb_block_chatgpt_upgrade($oldversion, $block) {
     global $CFG;
 
     // Moodle v2.8.0 release upgrade line.

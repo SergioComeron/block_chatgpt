@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Privacy Subsystem implementation for block_common_courses.
+ * Privacy Subsystem implementation for block_chatgpt.
  *
- * @package    block_common_courses
+ * @package    block_chatgpt
  * @copyright  2018 Sergio Comerón <sergio.comeron@udima.es>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -26,7 +26,7 @@
  /**
   * Privacy class for requesting user data.
   *
-  * @package    block common_courses
+  * @package    block chatgpt
   * @copyright  2021 Sergio Comerón <sergiocomeron@icloud.com>
   * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
   */

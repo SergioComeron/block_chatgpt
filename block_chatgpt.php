@@ -17,11 +17,11 @@
 /**
  * With this block installed, the courses that are enrolled and we are enrolled are shown in the profile of a user.
  *
- * @package    block_common_courses
+ * @package    block_chatgpt
  * @copyright  2018 Sergio Comerón Sánchez-Paniagua
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class block_common_courses extends block_list {
+class block_chatgpt extends block_list {
 
     /**
      * @var bool Flag to indicate whether the header should be hidden or not.
@@ -33,7 +33,7 @@ class block_common_courses extends block_list {
      *
      */
     public function init() {
-        $this->title = get_string('pluginname', 'block_common_courses');
+        $this->title = get_string('pluginname', 'block_chatgpt');
     }
 
     /**
