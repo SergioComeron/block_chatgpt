@@ -24,8 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2021051401;
+$plugin->version   = 2023032300;
 $plugin->requires  = 2017050500;
 $plugin->component = 'block_chatgpt';
-$plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.7';
+$plugin->maturity  = MATURITY_BETA;
+$plugin->release   = '1.0';
